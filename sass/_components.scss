@@ -139,8 +139,9 @@
         width: 3px;
         background-color: var(--color-primary);
         transform: scaleY(0);
-        transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
-        background-color: 0.1s;
+        transition: transform 0.2s, 
+                    width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+                    background-color: 0.1s;
     }
 
     &__item:hover::before,
