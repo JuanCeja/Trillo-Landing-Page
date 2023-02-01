@@ -188,12 +188,42 @@
 ///// GALLERY
 .gallery {
     display: flex;
-
+    
     &__photo {
         width: 100%;
         display: block;
     }
+}
 
-    &__item {
+///////////////////////////////////////////////
+///// OVERVIEW
+.overview {
+    &__heading {
+
+    }
+
+    &__stars {
+
+    }
+
+    &__icon-star,
+    &__icon-location{
+
+    }
+
+    &__location{
+
+    }
+
+    &__rating{
+
+    }
+
+    &__rating-average{
+
+    }
+
+    &__rating-count{
+
     }
 }
