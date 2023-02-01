@@ -198,21 +198,25 @@
 ///////////////////////////////////////////////
 ///// OVERVIEW
 .overview {
+    display: flex;
+
     &__heading {
 
     }
 
     &__stars {
-
+        // flex: 1;
+        margin-right: auto;
     }
 
     &__icon-star,
     &__icon-location{
-
+        height: 1.75rem;
+        width: 1.75rem;
+        fill: var(--color-primary);
     }
 
     &__location{
-
     }
 
     &__rating{
