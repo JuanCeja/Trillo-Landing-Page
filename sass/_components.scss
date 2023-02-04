@@ -361,9 +361,6 @@
         margin-right: auto;
     }
 
-    &__friends {
-    }
-
     &__photo {
         box-sizing: content-box;
         height: 4rem;
@@ -372,7 +369,7 @@
         border: 3px solid var(--color-grey-light-1);
 
         &:not(:last-child) {
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 }
