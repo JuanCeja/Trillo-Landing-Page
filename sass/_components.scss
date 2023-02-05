@@ -14,10 +14,10 @@
     align-items: center;
     justify-content: center;
 
-    @media only screen and (max-width: $bp-smallest){
+    @media only screen and (max-width: $bp-smallest) {
         order: 1;
         flex: 0 0 100%;
-        background-color: var(--color-grey-light-2)
+        background-color: var(--color-grey-light-2);
     }
 
     &__input {
@@ -132,10 +132,10 @@
         display: flex;
         margin: 0;
     }
-    
+
     &__item {
         position: relative;
-        
+
         &:not(:last-child) {
             margin-bottom: 0.5rem;
 
@@ -143,11 +143,10 @@
                 margin: 0;
             }
         }
-        
+
         @media only screen and (max-width: $bp-medium) {
             flex: 1;
         }
-
     }
 
     &__item::before {
@@ -193,18 +192,18 @@
 
         @media only screen and (max-width: $bp-small) {
             flex-direction: column;
-            padding: 1.5rem .5rem;
+            padding: 1.5rem 0.5rem;
         }
     }
-    
+
     &__icon {
         width: 1.75rem;
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;
-        
+
         @media only screen and (max-width: $bp-small) {
-            margin: 0 0 .7rem;
+            margin: 0 0 0.7rem;
             height: 1.5rem;
             width: 1.5rem;
         }
@@ -309,7 +308,7 @@
         text-transform: uppercase;
 
         @media only screen and (max-width: $bp-small) {
-            font-size: .5rem;
+            font-size: 0.5rem;
         }
     }
 }
@@ -399,9 +398,11 @@
         // background-size: cover;
 
         // Newer Browsers - we uses masks
-        background-color: var(--color-primary);
-        mask-image: url(../img/chevron-thin-right.svg);
-        mask-size: cover;
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+            background-color: var(--color-primary);
+            mask-image: url(../img/chevron-thin-right.svg);
+            mask-size: cover;
+        }
     }
 }
 
@@ -420,7 +421,6 @@
 
     &__friends {
         display: flex;
-
     }
 
     &__photo {
@@ -541,26 +541,26 @@
         width: 100%;
         transition: all 0.2s;
     }
-    
+
     &__visible {
         padding: 2rem 7.5rem;
     }
-    
+
     &__invisible {
         position: absolute;
         padding: 2rem 0;
         left: 0;
         top: -100%;
     }
-    
+
     &:hover {
         background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
     }
-    
+
     &:hover &__visible {
         transform: translateY(100%);
     }
-    
+
     &:hover &__invisible {
         top: 0;
     }
